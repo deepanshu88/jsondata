@@ -59,7 +59,7 @@ jobs:
       env:
         REPO_KEY: ${{secrets.GITHUB_TOKEN}}
         username: github-actions
-      with: |
+      with:
         source-directory: 'output'
         destination-github-username: 'markwsac'
         destination-repository-name: 'jsonfile'
