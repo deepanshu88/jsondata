@@ -54,12 +54,13 @@ jobs:
         
     # Add new files in data folder, commit along with other modified files, push
     - name: Pushes to another repository
-      uses: cpina/github-action-push-to-another-repository@main
+      uses: dmnemec/copy_file_to_another_repo_action@main
       env:
         API_TOKEN_GITHUB: ${{secrets.API_TOKEN_GITHUB}}
       with:
-        source-directory: 'output'
-        destination-github-username: 'markwsac'
-        destination-repository-name: 'jsonfile'
-        user-email: deepanshu88.us@gmail.com
-        target-branch: main 
+        source_file: 'output/myfile.json'
+        destination_repo: 'markwsac/jsonfile'
+        destination_folder: 'output'
+        user_email: 'deepanshu88.us@gmail.com'
+        user_name: 'deepanshu88'
+        commit_message: 'Update JSON'
