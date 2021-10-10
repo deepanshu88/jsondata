@@ -33,7 +33,6 @@ jobs:
       if: steps.cache.outputs.cache-hit != 'true'
       run: |
         install.packages('jsonlite')
-        install.packages('dplyr')
       shell: Rscript {0}
                     
     # Run R script
